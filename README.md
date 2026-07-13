@@ -22,8 +22,8 @@ The project combines electrical engineering fundamentals, embedded programming, 
 
 ## Demo
 
-[▶ Watch the GOAL Celebration Demo](assets/Goal-Cheer.mp4)
 
+https://github.com/user-attachments/assets/00130c9e-3229-4c12-bca7-6e8dc61c547e
 
 ---
 
@@ -447,8 +447,9 @@ Arduino-Football-Goal-Celebration-System/
 │
 ├── README.md
 ├── goal_celebration.ino
-├── circuit-overview.png
-└── Goal-Cheer.mp4
+└── assets/
+    ├── circuit-overview.png
+    └── Goal-Cheer.mp4
 ```
 
 ---
