@@ -23,28 +23,18 @@ The project combines electrical engineering fundamentals, embedded programming, 
 ## Demo
 
 
-https://github.com/user-attachments/assets/Goal-Cheer.mp4
+
+
+https://github.com/user-attachments/assets/81bbfcbd-ff09-41b0-86c1-7085625bda9f
+
+
 
 
 ---
 
 ## Circuit Overview
 
-
-
-circuit-overview.png
-
-```
-
-Then GitHub will display it using:
-
-```html
-<p align="center">
-  <img src="assets/circuit-overview.png"
-       alt="Arduino Football GOAL Celebration System Circuit"
-       width="950">
-</p>
-```
+<img width="1536" height="632" alt="circuit-overview png" src="https://github.com/user-attachments/assets/9d1b2948-e2cd-49b4-9ac8-9a31c581e7ca" />
 
 ---
 
