@@ -22,7 +22,7 @@ The project combines electrical engineering fundamentals, embedded programming, 
 
 ## Demo
 
-[▶ Watch the GOAL Celebration Demo](Goal-Cheer.mp4)
+[▶ Watch the GOAL Celebration Demo](assets/Goal-Cheer.mp4)
 
 
 ---
