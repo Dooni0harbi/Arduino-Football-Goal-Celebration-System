@@ -1,45 +1,28 @@
 Project Overview
 
-باقي التفاصيل
 
-يعني مباشرة بعد هذا الجزء:
 
 # ⚽ GOAL Celebration System — Arduino Interactive Match Experience
 
 > When engineering meets the excitement of football, even a simple goal can become a complete interactive experience.
-حطي الفيديو أولًا:
+
+
+
 
 ## Demo
 
 <div align="center">
 
-https://github.com/user-attachments/assets/PUT-YOUR-VIDEO-LINK-HERE
+https://github.com/user-attachments/assets/9797e569-a505-482a-b2ad-7d87a81dc2dd
 
 </div>
-ثم صورة المشروع:
 
 ## Circuit Overview
 
 <p align="center">
   <img src="assets/circuit-overview.png" alt="Arduino GOAL Celebration System Circuit" width="850">
 </p>
-ليه الفيديو قبل الصورة؟
-لأن الفيديو يوضح الفكرة فورًا:
 
-تضغطي الزر
-
-الشاشة تعرض GOAL!!!
-
-الموتور يشتغل
-
-الرينق ينور
-
-البازر يشتغل
-
-بعدها الصورة تشرح كيف اتنفذ كل هذا الخراب الجميل.
-
-إذا الفيديو طويل
-حطي GIF قصير فوق، والفيديو الكامل تحت قسم مستقل:
 
 ## Quick Preview
 
@@ -49,24 +32,10 @@ https://github.com/user-attachments/assets/PUT-YOUR-VIDEO-LINK-HERE
 
 ## Full Simulation Video
 
-https://github.com/user-attachments/assets/PUT-YOUR-VIDEO-LINK-HERE
-والأفضل عندك:
-
-GIF قصير بعد العنوان
-
-صورة الدائرة بعده مباشرة
-
-الفيديو الكامل لاحقًا تحت Full Demo
-
-هذا يخلي الريبو مرتب ويعرض النتيجة أول، بدل ما القارئ يقرأ عن الترانزستور والدايود قبل ما يعرف أصلًا ليش كلهم مجتمعين.
+[https://github.com/user-attachments/assets/PUT-YOUR-VIDEO-LINK-HERE
+](https://github.com/user-attachments/assets/9797e569-a505-482a-b2ad-7d87a81dc2dd
 
 
-Powerful Hango.png
-انت كتبت الريد مي للتوصيلات صح ؟؟
-
-إيوه، كتبت قسم التوصيلات في الـREADME على نفس التوصيل النهائي الظاهر عندك في الصورة:
-
-الزر → D8
 
 الموتور عبر NPN → D9
 
