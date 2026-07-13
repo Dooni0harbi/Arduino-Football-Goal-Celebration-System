@@ -22,12 +22,7 @@ The project combines electrical engineering fundamentals, embedded programming, 
 
 ## Demo
 
-
-
-
-https://github.com/user-attachments/assets/81bbfcbd-ff09-41b0-86c1-7085625bda9f
-
-
+[▶ Watch the GOAL Celebration Demo](Goal-Cheer.mp4)
 
 
 ---
@@ -298,179 +293,11 @@ At the same time:
 - The system returns to the ready state after the sequence finishes
 
 ---
+## Source Code
 
-## Complete Arduino Code
+The complete Arduino code is available here:
 
-```cpp
-#include <LiquidCrystal.h>
-#include <Adafruit_NeoPixel.h>
-
-const int buttonPin = 8;
-const int motorPin  = 9;
-const int buzzerPin = 7;
-
-const int ringPin = 10;
-const int pixelCount = 12;
-
-// LCD: RS, E, DB4, DB5, DB6, DB7
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
-
-Adafruit_NeoPixel ring(
-  pixelCount,
-  ringPin,
-  NEO_GRB + NEO_KHZ800
-);
-
-bool lastButtonState = HIGH;
-
-void setup() {
-  pinMode(buttonPin, INPUT_PULLUP);
-  pinMode(motorPin, OUTPUT);
-  pinMode(buzzerPin, OUTPUT);
-
-  digitalWrite(motorPin, LOW);
-  noTone(buzzerPin);
-
-  lcd.begin(16, 2);
-  showReadyScreen();
-
-  ring.begin();
-  ring.setBrightness(100);
-  ring.clear();
-  ring.show();
-}
-
-void loop() {
-  bool currentButtonState = digitalRead(buttonPin);
-
-  if (lastButtonState == HIGH && currentButtonState == LOW) {
-    goalCelebration();
-  }
-
-  lastButtonState = currentButtonState;
-  delay(30);
-}
-
-void goalCelebration() {
-  lcd.clear();
-  lcd.setCursor(4, 0);
-  lcd.print("GOAL!!!");
-  lcd.setCursor(1, 1);
-  lcd.print("Celebration!");
-
-  digitalWrite(motorPin, HIGH);
-
-  tone(buzzerPin, 900, 180);
-  delay(200);
-  tone(buzzerPin, 1200, 180);
-  delay(200);
-  tone(buzzerPin, 1500, 350);
-  delay(400);
-
-  greenRunningEffect();
-
-  fillRing(0, 255, 0);
-  delay(700);
-
-  rainbowEffect();
-
-  for (int i = 0; i < 4; i++) {
-    fillRing(0, 255, 0);
-    tone(buzzerPin, 1100, 100);
-    delay(180);
-
-    fillRing(255, 255, 255);
-    delay(180);
-  }
-
-  delay(500);
-
-  digitalWrite(motorPin, LOW);
-  noTone(buzzerPin);
-
-  ring.clear();
-  ring.show();
-
-  showReadyScreen();
-}
-
-void showReadyScreen() {
-  lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print("Ready...");
-  lcd.setCursor(0, 1);
-  lcd.print("Press Button");
-}
-
-void greenRunningEffect() {
-  for (int roundNumber = 0; roundNumber < 3; roundNumber++) {
-    for (int pixel = 0; pixel < pixelCount; pixel++) {
-      ring.clear();
-      ring.setPixelColor(pixel, ring.Color(0, 255, 0));
-      ring.show();
-      delay(80);
-    }
-  }
-}
-
-void fillRing(int red, int green, int blue) {
-  for (int pixel = 0; pixel < pixelCount; pixel++) {
-    ring.setPixelColor(
-      pixel,
-      ring.Color(red, green, blue)
-    );
-  }
-
-  ring.show();
-}
-
-void rainbowEffect() {
-  for (int colorStep = 0; colorStep < 256; colorStep += 4) {
-    for (int pixel = 0; pixel < pixelCount; pixel++) {
-      int colorPosition =
-        (pixel * 256 / pixelCount + colorStep) & 255;
-
-      ring.setPixelColor(
-        pixel,
-        colorWheel(colorPosition)
-      );
-    }
-
-    ring.show();
-    delay(25);
-  }
-}
-
-uint32_t colorWheel(byte position) {
-  position = 255 - position;
-
-  if (position < 85) {
-    return ring.Color(
-      255 - position * 3,
-      0,
-      position * 3
-    );
-  }
-
-  if (position < 170) {
-    position -= 85;
-
-    return ring.Color(
-      0,
-      position * 3,
-      255 - position * 3
-    );
-  }
-
-  position -= 170;
-
-  return ring.Color(
-    position * 3,
-    255 - position * 3,
-    0
-  );
-}
-```
+[`goal_celebration.ino`](goal_celebration.ino)
 
 ---
 
@@ -620,11 +447,8 @@ Arduino-Football-Goal-Celebration-System/
 │
 ├── README.md
 ├── goal_celebration.ino
-├── assets/
-│   ├── circuit-overview.png
-│   └── goal-celebration-demo.gif
-└── circuit/
-    └── tinkercad-link.txt
+├── circuit-overview.png
+└── Goal-Cheer.mp4
 ```
 
 ---
