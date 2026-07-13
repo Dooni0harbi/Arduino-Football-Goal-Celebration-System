@@ -22,20 +22,18 @@ The project combines electrical engineering fundamentals, embedded programming, 
 
 ## Demo
 
-Add the GitHub-generated video link below after uploading the project video:
 
-```text
 https://github.com/user-attachments/assets/Goal-Cheer.mp4
-```
+
 
 ---
 
 ## Circuit Overview
 
-Place the final circuit image inside an `assets` folder and name it:
 
-```text
+
 circuit-overview.png
+
 ```
 
 Then GitHub will display it using:
